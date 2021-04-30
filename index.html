@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>
-        Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
+        Be the Light
     </title>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -17,48 +17,39 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://raw.githubusercontent.com/LexmarkWeb/csi.js/master/csi.min.js"></script>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
     <style>
         .gradient {
+            background: linear-gradient(45deg, #000 0%, #333 80%, #6aa0f3 90%, white 100%);
+        }
+
+        .gradient2 {
             background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
         }
     </style>
+    
+    <script>
+        function be_the_light() {
+            $('.gradient').addClass('gradient2').removeClass('gradient');
+        }
+    </script>
 </head>
 
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
 <!--Nav-->
-<nav id="header" class="fixed w-full z-30 top-0 text-white">
+<nav id="header" class="fixed w-full z-30 top-0  gradient">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-                <!--Icon from: http://www.potlabicons.com/ -->
+            <a onclick="be_the_light()" class="no-underline hover:no-underline focus:no-underline font-bold text-2xl lg:text-4xl text-white focus:text-white hover:text-white" href="javascript:void(0);">
                 <i class="fas fa-cross"></i>
-                Be The
-                Light
+                Be The Light
             </a>
-        </div>
-        <div class="block lg:hidden pr-4">
-            <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                </svg>
-            </button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
-            <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Q & A</a>
-                </li>
-                <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Quiz</a>
-                </li>
-            </ul>
-            <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Why Churches Need to Open
-            </button>
         </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0"/>
@@ -75,7 +66,7 @@
             <p class="leading-normal text-2xl mb-8">
                 Matthew 25:40.
             </p>
-            <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <button href="#start" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 Why Churches Need to Open
             </button>
         </div>
@@ -85,7 +76,7 @@
         </div>
     </div>
 </div>
-<div class="relative -mt-12 lg:-mt-24">
+<div class="relative -mt-12 lg:-mt-24" id="start">
     <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -406,15 +397,10 @@
             <div class="w-full sm:w-1/2 p-6 mt-6">
                 <div class="align-middle">
                     <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                        Lorem ipsum dolor sit amet
+                        A Darkened Time
                     </h3>
                     <p class="text-gray-600 mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                        <br/>
-                        <br/>
-                        Images from:
-                        
-                        <a class="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
+                        The global pandemic has brought fear, anxiety and uncertain. Church must rise above comfort and be the light.
                     </p>
                 </div>
             </div>
@@ -422,149 +408,160 @@
     </div>
 </section>
 
+<!--rowQ&A-->
 <section class="bg-white border-b py-8">
+    <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Questions and Answers
+    </h1>
+    <div id="faith-level" class="container text-gray-100 text-center py-5 text-3xl gradient my-10">
+        <i class="pr-7 font-bold text-gray-50 underline">You are</i>
+        <label class="radio-inline pr-2">
+            <input type="radio" name="faith-level" value="1">
+            &nbsp;
+            Non Christian
+        </label>
+        
+        <label class="radio-inline pr-2">
+            <input type="radio" name="faith-level" value="2">
+            &nbsp;
+            New Christian
+        </label>
+        <label class="radio-inline pr-2">
+            <input type="radio" name="faith-level" value="3">
+            &nbsp;
+            Faithful Christian, Leaders
+        </label>
+        <label class="radio-inline pr-2">
+            <input type="radio" name="faith-level" value="all">
+            &nbsp;
+            <span class="label label-default">
+                All
+            </span>
+        </label>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $('input[name=faith-level]').change(
+                function () {
+                    let val = $(this).val();
+                    if (val == 'all') {
+                        $('div[level=1]').fadeIn();
+                        $('div[level=2]').fadeIn();
+                        $('div[level=3]').fadeIn();
+                    } else {
+                        $('div[level=1]').fadeOut();
+                        $('div[level=2]').fadeOut();
+                        $('div[level=3]').fadeOut();
+                        $('div[level=' + val + ']').fadeIn();
+                    }
+                }
+            );
+        });
+    </script>
+    
+    <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+    </div>
+    
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Questions and Answers
-        </h1>
-        <div class="w-full mb-4">
-            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        <div id="questions-and-answers" class="container mx-auto flex flex-wrap pt-4 pb-12">
+            <blog-post
+                    v-for="(item, index) in items"
+                    :id="'question' + index"
+                    :title="item.title"
+                    :level="item.level"
+                    :answer="item.answer"
+            ></blog-post>
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden ">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
+        <script>
+            Vue.component('blog-post', {
+                props: ['title', 'answer', 'id', 'level'],
+                template: `
+                  <div :level="level" class="w-full md:w-1/3 p-6 flex flex-col flex-shrink">
+                  <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden ">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
-                            <h4 class="panel-title text-center">
-                                Should we be good citizens?
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <div class="flex items-center justify-center">
-                                        <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </a>
-                            </h4>
+                          <h4 class="panel-title text-center">
+                            {{ title }}
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" :href="'#' + id" aria-expanded="true" :aria-controls="id">
+                              <div class="flex items-center justify-center">
+                                <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                  Learn More
+                                </button>
+                              </div>
+                            </a>
+                          </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse text-gray-900" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
+                        <div :id="id" class="panel-collapse collapse text-gray-900" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            {{ answer }}
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden ">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading2">
-                            <h4 class="panel-title text-center">
-                                Why not just do online church for a few more weeks?
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <div class="flex items-center justify-center">
-                                        <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse2" class="panel-collapse collapse text-gray-900" role="tabpanel" aria-labelledby="heading2">
-                            <div class="panel-body">
-                                222
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden ">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading3">
-                            <h4 class="panel-title text-center">
-                                Sports are online only
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                    <div class="flex items-center justify-center">
-                                        <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse3" class="panel-collapse collapse text-gray-900" role="tabpanel" aria-labelledby="heading3">
-                            <div class="panel-body">
-                                33
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden ">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading4">
-                            <h4 class="panel-title text-center">
-                                They are sending patients to our hospital, our neighbours will hate us.
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                                    <div class="flex items-center justify-center">
-                                        <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse4" class="panel-collapse collapse text-gray-900" role="tabpanel" aria-labelledby="heading4">
-                            <div class="panel-body">
-                                4
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden ">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading5">
-                            <h4 class="panel-title text-center">
-                                Our congregation likes zoom and online streaming
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                                    <div class="flex items-center justify-center">
-                                        <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse5" class="panel-collapse collapse text-gray-900" role="tabpanel" aria-labelledby="heading5">
-                            <div class="panel-body">
-                                5
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                  </div>
+                  </div>
+                `
+            })
+
+            new Vue({
+                el: '#questions-and-answers',
+                data: {
+                    items: [
+                        {
+                            'title': 'I dont want to get sick',
+                            'answer': 'Yes but..',
+                            'level': 1
+                        },
+                        {
+                            'title': 'This is not loving..',
+                            'answer': 'Yes but..',
+                            'level': 1
+                        },
+                        {
+                            'title': 'Should we be good citizens?',
+                            'answer': 'Yes but..',
+                            'level': 3
+                        },
+                        {
+                            'title': 'Our congregation likes zoom and online streaming',
+                            'answer': 'answer...',
+                            'level': 3
+                        },
+                        {
+                            'title': 'There is no persecution because sports are online only',
+                            'answer': 'answer...',
+                            'level': 3
+                        },
+                        {
+                            'title': 'Why not just do online church for a few more weeks?',
+                            'answer': 'answer...',
+                            'level': 3
+                        },
+                        {
+                            'title': 'They are sending patients to our hospital, we are not loving our neighbours',
+                            'answer': 'answer...',
+                            'level': 3
+                        },
+                        {
+                            'title': 'Current situation may change all of a sudden like what happened to India',
+                            'answer': 'answer...'
+                        },
+                    ]
+                },
+            });
+        </script>
+    
     </div>
 </section>
+
+<!--rowGodVsNeighbour-->
 <section class="bg-gray-100 py-8">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Love God vs Loving Neighbour
+            Greatest Commandment
         </h1>
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -573,68 +570,34 @@
             <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
                 <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
                     <div class="p-8 text-3xl font-bold text-center border-b-4">
-                        Community that needs us
+                        People
                     </div>
-                    <ul class="w-full text-center text-sm">
-                        <li class="border-b py-4">Thing</li>
+                    <ul class="w-full text-2xl text-center text-sm">
+                        <li class="border-b py-4">Mock Us</li>
+                        <li class="border-b py-4">May be saved from the virus but die eternally?</li>
                     </ul>
-                </div>
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                        £0
-                        <span class="text-base">for one user</span>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Sign Up
-                        </button>
-                    </div>
                 </div>
             </div>
             <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
                 <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                     <div class="w-full p-8 text-3xl font-bold text-center">Loving God</div>
                     <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-                    <ul class="w-full text-center text-base font-bold">
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
+                    <ul class="w-full text-2xl text-center text-base font-bold">
+                        <li class="border-b py-4">To reach the lost</li>
+                        <li class="border-b py-4">To stand for Christ</li>
+                        <li class="border-b py-4">Sense of urgency for we know not our time will come</li>
                     </ul>
-                </div>
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div class="w-full pt-6 text-4xl font-bold text-center">
-                        £x.99
-                        <span class="text-base">/ per user</span>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Sign Up
-                        </button>
-                    </div>
                 </div>
             </div>
             <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
                 <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
                     <div class="p-8 text-3xl font-bold text-center border-b-4">
-                        Neighbours don't want us to open
+                        Government
                     </div>
-                    <ul class="w-full text-center text-sm">
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
-                        <li class="border-b py-4">Thing</li>
+                    <ul class="w-full text-2xl text-center text-sm">
+                        <li class="border-b py-4">Fine Us, Jail Us</li>
+                        <li class="border-b py-4">Has been unjust and does not see church as essential</li>
                     </ul>
-                </div>
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                        £x.99
-                        <span class="text-base">/ per user</span>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Sign Up
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -662,132 +625,73 @@
         </g>
     </g>
 </svg>
-<!--Footer-->
+<!--rowFooter-->
 <footer class="bg-white">
     <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
             <div class="flex-1 mb-6 text-black">
                 <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
                     <!--Icon from: http://www.potlabicons.com/ -->
-                    <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-                        <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)"/>
-                        <path
-                                class="plane-take-off"
-                                d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-                        />
-                    </svg>
-                    LANDING
+                    <i class="fas fa-cross"></i>
+                    Be the Light
                 </a>
             </div>
             <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Links</p>
+                <p class="uppercase text-gray-500 md:mb-6">The Call to Open</p>
                 <ul class="list-reset mb-6">
                     <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                        <a target="_blank" href="https://www.biblegateway.com/passage/?search=Matthew%205%3A14-16&version=NIV"
+                           class="no-underline hover:underline text-gray-800 hover:text-pink-500">Matthew 5:14
+                        </a>
                     </li>
                     <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                        <a target="_blank" href="https://www.biblegateway.com/passage/?search=Matthew+25%3A40&version=NIV"
+                           class="no-underline hover:underline text-gray-800 hover:text-pink-500">Matthew 25:40
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+                <p class="uppercase text-gray-500 md:mb-6">Authority in King Jesus</p>
+                <ul class="list-reset mb-6">
+                </ul>
+            </div>
+            <div class="flex-1">
+                <p class="uppercase text-gray-500 md:mb-6">Leveraging Technology</p>
                 <ul class="list-reset mb-6">
                     <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+                        <a target="_blank" href="https://www.biblegateway.com/passage/?search=Matthew%2025%3A14-30&version=NLT" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Matthew 25:14-30</a>
                     </li>
                 </ul>
             </div>
             <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Social</p>
+                <p class="uppercase text-gray-500 md:mb-6">Heavenly Citizenship</p>
                 <ul class="list-reset mb-6">
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-1">
-                <p class="uppercase text-gray-500 md:mb-6">Company</p>
-                <ul class="list-reset mb-6">
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
-                    </li>
-                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-                    </li>
+                
                 </ul>
             </div>
         </div>
     </div>
-    <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
 </footer>
-<!-- jQuery if you need it
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
--->
+
 <script>
     var scrollpos = window.scrollY;
     var header = document.getElementById("header");
-    var navcontent = document.getElementById("nav-content");
-    var navaction = document.getElementById("navAction");
-    var brandname = document.getElementById("brandname");
-    var toToggle = document.querySelectorAll(".toggleColour");
 
     document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
         scrollpos = window.scrollY;
 
         if (scrollpos > 10) {
-            header.classList.add("bg-white");
-            navaction.classList.remove("bg-white");
-            navaction.classList.add("gradient");
-            navaction.classList.remove("text-gray-800");
-            navaction.classList.add("text-white");
-            //Use to switch toggleColour colours
-            for (var i = 0; i < toToggle.length; i++) {
-                toToggle[i].classList.add("text-gray-800");
-                toToggle[i].classList.remove("text-white");
-            }
+            header.classList.add("bg-black");
             header.classList.add("shadow");
-            navcontent.classList.remove("bg-gray-100");
-            navcontent.classList.add("bg-white");
         } else {
             header.classList.remove("bg-white");
-            navaction.classList.remove("gradient");
-            navaction.classList.add("bg-white");
-            navaction.classList.remove("text-white");
-            navaction.classList.add("text-gray-800");
-            //Use to switch toggleColour colours
-            for (var i = 0; i < toToggle.length; i++) {
-                toToggle[i].classList.add("text-white");
-                toToggle[i].classList.remove("text-gray-800");
-            }
-
             header.classList.remove("shadow");
-            navcontent.classList.remove("bg-white");
-            navcontent.classList.add("bg-gray-100");
         }
     });
 </script>
 <script>
-    /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
-
-    var navMenuDiv = document.getElementById("nav-content");
     var navMenu = document.getElementById("nav-toggle");
 
     document.onclick = check;
